@@ -1,5 +1,5 @@
 # AZ-203-Code
-This repository is for anything code related to the AZ-203. It will contain AZ CLI, PowerShell, and maybe even Python.
+This repository is for anything code related to the AZ-203 (Azure Certified Developer). It will contain AZ CLI, PowerShell, and Python.
 
 # What this repo will consist of
 ## Code for:

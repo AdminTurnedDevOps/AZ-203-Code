@@ -38,5 +38,7 @@ def listVnets(clientId, tenant, subscription):
     except Exception as e:
         logging.error(e)
 
-
-listVnets(clientId=, tenant=, subscription=)
+if __name__ == '__main__':
+    listVnets(clientId=, tenant=, subscription=)
+else:
+    print('Running vNet script as an import')

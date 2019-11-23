@@ -26,7 +26,11 @@ def listVnets(clientId, tenant, subscription):
 
         logging.log(msg='Printing vNets', level=1)
         for i in net.virtual_networks.list_all():
-            print(i)
+            print(
+                "ID: {}\nName: {} \nLocation:".format(
+                    i.id, i.name, i.location
+                )
+            )
 
     except azure.common.exceptions.AuthenticationError:
         logging.error('ERROR: There was an authentication issue. Please confirm your client id, secret, tenant, subscription, and try again')

@@ -12,7 +12,7 @@ import azure.common.exceptions
 def listVnets(clientId, tenant, subscription):
 
     try:
-        logging.log('Obtaining secret')
+        logging.log(msg='Obtaining Secret', level=1)
         passw = getpass.getpass(prompt='Password: ')
 
         credentials = ServicePrincipalCredentials(
@@ -21,10 +21,10 @@ def listVnets(clientId, tenant, subscription):
             tenant = tenant
         )
 
-        logging.log('Obtaining network management information')
+        logging.log(msg='Obtaining network management information', level=1)
         net = NetworkManagementClient(credentials, subscription)
 
-        logging.log('Printing vNets')
+        logging.log(msg='Printing vNets', level=1)
         for i in net.virtual_networks.list_all():
             print(i)
 

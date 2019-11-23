@@ -13,7 +13,7 @@ import logging
 
 def newRedisCache(clientId, password, tenant, subscriptionId):
     
-    logging.warning('Please confirm you have the azure Python SDK installed. If you do not, run pip install azure')
+    logging.warning(msg='Please confirm you have the azure Python SDK installed. If you do not, run pip install azure')
 
     try:
         credentials = ServicePrincipalCredentials(

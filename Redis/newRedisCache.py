@@ -52,4 +52,8 @@ password = sys.argv[2]
 tenant = sys.argv[3]
 subscriptionId = sys.argv[4]
 
-newRedisCache(clientId, password, tenant, subscriptionId)
+if __name__ == '__main__':
+    newRedisCache(clientId, password, tenant, subscriptionId)
+else:
+    print('Running newRedisCache as an imported library')
+    newRedisCache(clientId, password, tenant, subscriptionId)

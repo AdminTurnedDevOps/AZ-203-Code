@@ -35,5 +35,5 @@ function Get-AzAccessToken {
 
 function Get-BearerToken {
     $ErrorActionPreference = 'Stop'
-    ('Bearer {0}' -f (Get-AzCachedAccessToken))
+    ('Bearer {0}' -f (Get-AzAccessToken))
 }

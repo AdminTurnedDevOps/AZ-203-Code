@@ -1,3 +1,5 @@
+# Special shout-out to s_lapointe on this: https://gallery.technet.microsoft.com/scriptcenter/Easily-obtain-AccessToken-3ba6e593
+
 function Get-AzAccessToken {   
     
     $mod = Get-Module Az.Accounts 

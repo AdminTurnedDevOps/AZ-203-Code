@@ -122,7 +122,14 @@ function New-AZFunctionApp {
         $storageAccountName = $functionAppName + 'strg'
         $store = az storage account create --name $storageAccountName --resource-group $resourceGroup
 
+        try {
         az functionapp create --resource-group $resourceGroup --plan $appServicePlan --name $functionAppName --storage-account $storageAccountName
+        }
+
+        catch {
+            Write-Warning 'An error has occurred'
+            $PSCmdlet.ThrowTerminatingError($_)
+        }
     }
 
     end { }
